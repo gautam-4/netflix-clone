@@ -186,6 +186,10 @@ body>div{
 
 .questions{
     height: 160vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .questions>.topic, .questions>.third-line{
     text-align: center;
@@ -193,10 +197,9 @@ body>div{
     padding-bottom: 25px;
 }
 .question-list{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 150px;
-    margin-right: 150px;
     gap: 10px;
 }
 .question{
@@ -255,7 +258,7 @@ footer select{
     margin: 20px 0;
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1400px){
     .logo{
         position: absolute;
         top: 30px;
@@ -294,10 +297,6 @@ footer select{
     footer{
         height: 60vh;
     }
-    .question-list{
-        margin-left: 30px;
-        margin-right: 40px;
-    }
 }
 
 @media (max-width: 700px){
@@ -320,6 +319,15 @@ footer select{
     }
     .footer-grid{
         grid-template-columns: 1fr 1fr;
+    }
+    body{
+        width: 150vw;
+    }
+    .main-text{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
 
@@ -372,7 +380,10 @@ footer select{
     .questions{
         height: 200vh;
     }
-    .questions>.topic, .questions>.third-line{
-        padding-left: 80px;
+
+    @media (max-width: 400px) {
+        body{
+            width: 450vw;
+        }
     }
 }
